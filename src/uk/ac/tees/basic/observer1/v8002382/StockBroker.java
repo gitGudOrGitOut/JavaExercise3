@@ -17,10 +17,17 @@ public class StockBroker extends ShareWatcher{
     }
     @Override
     public void updatePrice(double price) {
-        if(price < 2)
+        if(price < 2 && portfolio + 500 <= 3000)
+        {
+            balance -= 500 * price;
             portfolio += 500;
+        }
         else if(price > 3 && portfolio >= 500)
+        {
+            balance += 500 * price;
             portfolio -= 500;
+        }
+        
     }
     
 }

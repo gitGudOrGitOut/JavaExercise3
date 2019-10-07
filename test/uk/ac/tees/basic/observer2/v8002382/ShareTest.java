@@ -1,15 +1,9 @@
 package uk.ac.tees.basic.observer2.v8002382;
 
-import uk.ac.tees.basic.observer2.username.BankManager;
-import uk.ac.tees.basic.observer2.username.StockBroker;
-import uk.ac.tees.basic.observer2.username.Share;
+import uk.ac.tees.basic.observer1.v8002382.BankManager;
+import uk.ac.tees.basic.observer1.v8002382.StockBroker;
+import uk.ac.tees.basic.observer1.v8002382.Share;
 import org.junit.Test;
-import uk.ac.tees.basic.observer2.username.BankManager;
-import uk.ac.tees.basic.observer2.username.BankManager;
-import uk.ac.tees.basic.observer2.username.Share;
-import uk.ac.tees.basic.observer2.username.Share;
-import uk.ac.tees.basic.observer2.username.StockBroker;
-import uk.ac.tees.basic.observer2.username.StockBroker;
 import static org.junit.Assert.*;
 
 /** A set of unit tests classes that check the AJP-P3-BASIC, 
@@ -73,13 +67,13 @@ public class ShareTest {
         final Share share = new Share();
         final BankManager bankManager = new BankManager(BM_BUY, BM_SELL, BM_INCREMENT);
         assertTrue(share.addShareWatcher(bankManager));
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
         final double expectedValue = -495.0;
         assertEquals(bankManager.getBalance(), expectedValue, 0);
     }
@@ -93,10 +87,10 @@ public class ShareTest {
         final Share share = new Share();
         final BankManager bankManager = new BankManager(BM_BUY, BM_SELL, BM_INCREMENT);
         assertTrue(share.addShareWatcher(bankManager));
-        share.changePrice(PRICE2);
-        share.changePrice(PRICE2);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE2);
+        share.setPrice(PRICE2);
+        share.setPrice(PRICE2);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE2);
         final double expectedValue = 1313.0;
         assertEquals(bankManager.getBalance(), expectedValue, 0);
     }
@@ -109,14 +103,14 @@ public class ShareTest {
         final Share share = new Share();
         final StockBroker stockBroker = new StockBroker(SB_BUY, SB_SELL, SB_INCREMENT);
         assertTrue(share.addShareWatcher(stockBroker));
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE1);
         final int expectedValue = 3000;
         assertEquals(expectedValue, stockBroker.getPortfolio());
     }
@@ -130,10 +124,10 @@ public class ShareTest {
         final Share share = new Share();
         final StockBroker stockBroker = new StockBroker(SB_BUY, SB_SELL, SB_INCREMENT);
         assertTrue(share.addShareWatcher(stockBroker));
-        share.changePrice(PRICE2);
-        share.changePrice(PRICE2);
-        share.changePrice(PRICE1);
-        share.changePrice(PRICE2);
+        share.setPrice(PRICE2);
+        share.setPrice(PRICE2);
+        share.setPrice(PRICE1);
+        share.setPrice(PRICE2);
         final double expectedValue = 6565.0;
         assertEquals(expectedValue, stockBroker.getBalance(), 0);
     }

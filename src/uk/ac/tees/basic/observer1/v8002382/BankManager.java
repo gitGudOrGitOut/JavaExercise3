@@ -17,13 +17,14 @@ public class BankManager extends ShareWatcher{
     }
     @Override
     public void updatePrice(double price) {
-        if(price < 1)
+        if(price < 1 && balance - (100 * price) >= -500)
         {
+            balance -= 100 * price;
             portfolio += 100;
         }
         else if(price > 4 && portfolio >= 100)
         {
-            
+            balance += 100 * price;
             portfolio -= 100;
         }
     }
