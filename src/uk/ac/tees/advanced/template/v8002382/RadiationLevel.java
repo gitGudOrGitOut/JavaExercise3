@@ -1,4 +1,4 @@
-package uk.ac.tees.advanced.template.username;
+package uk.ac.tees.advanced.template.v8002382;
 
 /** <p>An enumeration of the various levels of radiation a robot can experience 
  * on Mars.</p>

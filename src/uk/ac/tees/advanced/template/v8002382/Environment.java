@@ -1,6 +1,6 @@
 
 
-package uk.ac.tees.advanced.template.username;
+package uk.ac.tees.advanced.template.v8002382;
 
 /** <p>A class which stores environmental data about Mars. This class is used
  * by robots on Mars to determine if it is safe to operate.</p>

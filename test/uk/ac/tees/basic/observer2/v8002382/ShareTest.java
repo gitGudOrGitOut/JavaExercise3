@@ -1,11 +1,14 @@
-package uk.ac.tees.basic.observer2.username;
+package uk.ac.tees.basic.observer2.v8002382;
 
 import uk.ac.tees.basic.observer2.username.BankManager;
 import uk.ac.tees.basic.observer2.username.StockBroker;
 import uk.ac.tees.basic.observer2.username.Share;
 import org.junit.Test;
 import uk.ac.tees.basic.observer2.username.BankManager;
+import uk.ac.tees.basic.observer2.username.BankManager;
 import uk.ac.tees.basic.observer2.username.Share;
+import uk.ac.tees.basic.observer2.username.Share;
+import uk.ac.tees.basic.observer2.username.StockBroker;
 import uk.ac.tees.basic.observer2.username.StockBroker;
 import static org.junit.Assert.*;
 

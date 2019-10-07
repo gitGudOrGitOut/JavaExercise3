@@ -1,8 +1,7 @@
-package uk.ac.tees.basic.multiton.username;
+package uk.ac.tees.basic.multiton.v8002382;
 
-import uk.ac.tees.basic.multiton.username.Share;
+import uk.ac.tees.basic.multiton.v8002382.Share;
 import org.junit.Test;
-import uk.ac.tees.basic.multiton.username.Share;
 import static org.junit.Assert.*;
 
 /** A set of unit tests that check the solution to the AJP-P3-BASIC,

@@ -1,18 +1,22 @@
-package uk.ac.tees.advanced.template.username;
+package uk.ac.tees.advanced.template.v8002382;
 
 import uk.ac.tees.advanced.template.username.Bot;
 import uk.ac.tees.advanced.template.username.AerialBot;
-import uk.ac.tees.advanced.template.username.RadiationLevel;
-import uk.ac.tees.advanced.template.username.FileUtility;
-import uk.ac.tees.advanced.template.username.Environment;
+import uk.ac.tees.advanced.template.v8002382.RadiationLevel;
+import uk.ac.tees.advanced.template.v8002382.FileUtility;
+import uk.ac.tees.advanced.template.v8002382.Environment;
 import uk.ac.tees.advanced.template.username.ScannerBot;
 import uk.ac.tees.advanced.template.username.DiggerBot;
 import java.io.File;
 import java.util.ArrayList;
 import org.junit.Test;
 import uk.ac.tees.advanced.template.username.AerialBot;
+import uk.ac.tees.advanced.template.username.AerialBot;
+import uk.ac.tees.advanced.template.username.Bot;
 import uk.ac.tees.advanced.template.username.Bot;
 import uk.ac.tees.advanced.template.username.DiggerBot;
+import uk.ac.tees.advanced.template.username.DiggerBot;
+import uk.ac.tees.advanced.template.username.ScannerBot;
 import uk.ac.tees.advanced.template.username.ScannerBot;
 import static org.junit.Assert.*;
 

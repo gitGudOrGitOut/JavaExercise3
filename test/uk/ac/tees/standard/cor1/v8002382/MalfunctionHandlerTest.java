@@ -1,26 +1,32 @@
-package uk.ac.tees.standard.cor2.username;
+package uk.ac.tees.standard.cor1.v8002382;
 
-import uk.ac.tees.standard.cor2.username.Engineer;
-import uk.ac.tees.standard.cor2.username.Malfunction;
-import uk.ac.tees.standard.cor2.username.Captain;
-import uk.ac.tees.standard.cor2.username.SpaceMonkey;
-import uk.ac.tees.standard.cor2.username.Severity;
-import uk.ac.tees.standard.cor2.username.ServiceRobot;
-import uk.ac.tees.standard.cor2.username.FileUtility;
+import uk.ac.tees.standard.cor1.username.Captain;
+import uk.ac.tees.standard.cor1.username.Malfunction;
+import uk.ac.tees.standard.cor1.username.Severity;
+import uk.ac.tees.standard.cor1.username.ServiceRobot;
+import uk.ac.tees.standard.cor1.v8002382.FileUtility;
+import uk.ac.tees.standard.cor1.username.SpaceMonkey;
+import uk.ac.tees.standard.cor1.username.Engineer;
 import java.io.File;
 import org.junit.Test;
-import uk.ac.tees.standard.cor2.username.Captain;
-import uk.ac.tees.standard.cor2.username.Captain;
-import uk.ac.tees.standard.cor2.username.Engineer;
-import uk.ac.tees.standard.cor2.username.Engineer;
-import uk.ac.tees.standard.cor2.username.Malfunction;
-import uk.ac.tees.standard.cor2.username.Malfunction;
-import uk.ac.tees.standard.cor2.username.ServiceRobot;
-import uk.ac.tees.standard.cor2.username.ServiceRobot;
-import uk.ac.tees.standard.cor2.username.Severity;
-import uk.ac.tees.standard.cor2.username.Severity;
-import uk.ac.tees.standard.cor2.username.SpaceMonkey;
-import uk.ac.tees.standard.cor2.username.SpaceMonkey;
+import uk.ac.tees.standard.cor1.username.Captain;
+import uk.ac.tees.standard.cor1.username.Captain;
+import uk.ac.tees.standard.cor1.username.Captain;
+import uk.ac.tees.standard.cor1.username.Engineer;
+import uk.ac.tees.standard.cor1.username.Engineer;
+import uk.ac.tees.standard.cor1.username.Engineer;
+import uk.ac.tees.standard.cor1.username.Malfunction;
+import uk.ac.tees.standard.cor1.username.Malfunction;
+import uk.ac.tees.standard.cor1.username.Malfunction;
+import uk.ac.tees.standard.cor1.username.ServiceRobot;
+import uk.ac.tees.standard.cor1.username.ServiceRobot;
+import uk.ac.tees.standard.cor1.username.ServiceRobot;
+import uk.ac.tees.standard.cor1.username.Severity;
+import uk.ac.tees.standard.cor1.username.Severity;
+import uk.ac.tees.standard.cor1.username.Severity;
+import uk.ac.tees.standard.cor1.username.SpaceMonkey;
+import uk.ac.tees.standard.cor1.username.SpaceMonkey;
+import uk.ac.tees.standard.cor1.username.SpaceMonkey;
 import static org.junit.Assert.*;
 
 /** This test unit makes sure the correct malfunction handlers are being selected.
@@ -36,7 +42,7 @@ public class MalfunctionHandlerTest {
     }
 
     /**
-     * Test of processMalfunction method, of class MalfunctionHandler.
+     * Test of processMalfunction method.
      */
     @Test
     public void testProcessMalfunction() {
@@ -47,10 +53,10 @@ public class MalfunctionHandlerTest {
         final Engineer e = new Engineer(Severity.MEDIUM);
         final Captain c = new Captain(Severity.HIGH);
         
-        // Use trickle down technique to build chain
-        sm.addHandler(sr);
-        sm.addHandler(e);
-        sm.addHandler(c);
+        // Construct chain of responsibility
+        sm.setNextHandler(sr); 
+        sr.setNextHandler(e);
+        e.setNextHandler(c);
         
         // Create malfunctions
         final Malfunction m1 = new Malfunction(Severity.HIGH, "Life support error. Oxygen "
@@ -66,7 +72,7 @@ public class MalfunctionHandlerTest {
         final Malfunction m7 = new Malfunction(Severity.HIGH, "Proximity alert. Collision imminent");
         
         // Clean log file
-        FileUtility.resetFile(new File("log-cor2.txt"));
+        FileUtility.resetFile(new File("log-cor1.txt"));
         
         // Process malfunctions
         sm.processMalfunction(m1);
@@ -77,9 +83,9 @@ public class MalfunctionHandlerTest {
         sm.processMalfunction(m6);
         sm.processMalfunction(m7);
         
-        // Check  log file
-        final String actualOutput = FileUtility.readFile(new File("log-cor2.txt"));
-        final String expectedOutput = FileUtility.readFile(new File("expected-cor2.txt"));
+        // Check log file
+        final String actualOutput = FileUtility.readFile(new File("log-cor1.txt"));
+        final String expectedOutput = FileUtility.readFile(new File("expected-cor1.txt"));
         assertEquals(actualOutput, expectedOutput);
     }
 }
