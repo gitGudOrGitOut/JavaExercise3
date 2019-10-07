@@ -1,14 +1,8 @@
 package uk.ac.tees.standard.cor1.v8002382;
 
-import uk.ac.tees.standard.cor1.username.Malfunction;
-import uk.ac.tees.standard.cor1.username.Severity;
+import uk.ac.tees.standard.cor1.v8002382.Malfunction;
+import uk.ac.tees.standard.cor1.v8002382.Severity;
 import org.junit.Test;
-import uk.ac.tees.standard.cor1.username.Malfunction;
-import uk.ac.tees.standard.cor1.username.Malfunction;
-import uk.ac.tees.standard.cor1.username.Malfunction;
-import uk.ac.tees.standard.cor1.username.Severity;
-import uk.ac.tees.standard.cor1.username.Severity;
-import uk.ac.tees.standard.cor1.username.Severity;
 import static org.junit.Assert.*;
 
 /** A set of unit tests to check the Malfunction class.

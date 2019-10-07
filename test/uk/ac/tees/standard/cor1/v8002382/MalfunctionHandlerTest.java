@@ -1,32 +1,14 @@
 package uk.ac.tees.standard.cor1.v8002382;
 
-import uk.ac.tees.standard.cor1.username.Captain;
-import uk.ac.tees.standard.cor1.username.Malfunction;
-import uk.ac.tees.standard.cor1.username.Severity;
-import uk.ac.tees.standard.cor1.username.ServiceRobot;
+import uk.ac.tees.standard.cor1.v8002382.Captain;
+import uk.ac.tees.standard.cor1.v8002382.Malfunction;
+import uk.ac.tees.standard.cor1.v8002382.Severity;
+import uk.ac.tees.standard.cor1.v8002382.ServiceRobot;
 import uk.ac.tees.standard.cor1.v8002382.FileUtility;
-import uk.ac.tees.standard.cor1.username.SpaceMonkey;
-import uk.ac.tees.standard.cor1.username.Engineer;
+import uk.ac.tees.standard.cor1.v8002382.SpaceMonkey;
+import uk.ac.tees.standard.cor1.v8002382.Engineer;
 import java.io.File;
 import org.junit.Test;
-import uk.ac.tees.standard.cor1.username.Captain;
-import uk.ac.tees.standard.cor1.username.Captain;
-import uk.ac.tees.standard.cor1.username.Captain;
-import uk.ac.tees.standard.cor1.username.Engineer;
-import uk.ac.tees.standard.cor1.username.Engineer;
-import uk.ac.tees.standard.cor1.username.Engineer;
-import uk.ac.tees.standard.cor1.username.Malfunction;
-import uk.ac.tees.standard.cor1.username.Malfunction;
-import uk.ac.tees.standard.cor1.username.Malfunction;
-import uk.ac.tees.standard.cor1.username.ServiceRobot;
-import uk.ac.tees.standard.cor1.username.ServiceRobot;
-import uk.ac.tees.standard.cor1.username.ServiceRobot;
-import uk.ac.tees.standard.cor1.username.Severity;
-import uk.ac.tees.standard.cor1.username.Severity;
-import uk.ac.tees.standard.cor1.username.Severity;
-import uk.ac.tees.standard.cor1.username.SpaceMonkey;
-import uk.ac.tees.standard.cor1.username.SpaceMonkey;
-import uk.ac.tees.standard.cor1.username.SpaceMonkey;
 import static org.junit.Assert.*;
 
 /** This test unit makes sure the correct malfunction handlers are being selected.

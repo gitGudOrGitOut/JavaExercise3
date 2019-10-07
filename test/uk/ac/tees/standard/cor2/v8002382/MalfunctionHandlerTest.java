@@ -1,32 +1,14 @@
 package uk.ac.tees.standard.cor2.v8002382;
 
-import uk.ac.tees.standard.cor2.username.Engineer;
-import uk.ac.tees.standard.cor2.username.Malfunction;
-import uk.ac.tees.standard.cor2.username.Captain;
-import uk.ac.tees.standard.cor2.username.SpaceMonkey;
-import uk.ac.tees.standard.cor2.username.Severity;
-import uk.ac.tees.standard.cor2.username.ServiceRobot;
+import uk.ac.tees.standard.cor1.v8002382.Engineer;
+import uk.ac.tees.standard.cor1.v8002382.Malfunction;
+import uk.ac.tees.standard.cor1.v8002382.Captain;
+import uk.ac.tees.standard.cor1.v8002382.SpaceMonkey;
+import uk.ac.tees.standard.cor1.v8002382.Severity;
+import uk.ac.tees.standard.cor1.v8002382.ServiceRobot;
 import uk.ac.tees.standard.cor2.v8002382.FileUtility;
 import java.io.File;
 import org.junit.Test;
-import uk.ac.tees.standard.cor2.username.Captain;
-import uk.ac.tees.standard.cor2.username.Captain;
-import uk.ac.tees.standard.cor2.username.Captain;
-import uk.ac.tees.standard.cor2.username.Engineer;
-import uk.ac.tees.standard.cor2.username.Engineer;
-import uk.ac.tees.standard.cor2.username.Engineer;
-import uk.ac.tees.standard.cor2.username.Malfunction;
-import uk.ac.tees.standard.cor2.username.Malfunction;
-import uk.ac.tees.standard.cor2.username.Malfunction;
-import uk.ac.tees.standard.cor2.username.ServiceRobot;
-import uk.ac.tees.standard.cor2.username.ServiceRobot;
-import uk.ac.tees.standard.cor2.username.ServiceRobot;
-import uk.ac.tees.standard.cor2.username.Severity;
-import uk.ac.tees.standard.cor2.username.Severity;
-import uk.ac.tees.standard.cor2.username.Severity;
-import uk.ac.tees.standard.cor2.username.SpaceMonkey;
-import uk.ac.tees.standard.cor2.username.SpaceMonkey;
-import uk.ac.tees.standard.cor2.username.SpaceMonkey;
 import static org.junit.Assert.*;
 
 /** This test unit makes sure the correct malfunction handlers are being selected.
@@ -54,9 +36,9 @@ public class MalfunctionHandlerTest {
         final Captain c = new Captain(Severity.HIGH);
         
         // Use trickle down technique to build chain
-        sm.addHandler(sr);
-        sm.addHandler(e);
-        sm.addHandler(c);
+        sm.setNextHandler(sr);
+        sm.setNextHandler(e);
+        sm.setNextHandler(c);
         
         // Create malfunctions
         final Malfunction m1 = new Malfunction(Severity.HIGH, "Life support error. Oxygen "
