@@ -1,15 +1,9 @@
 package uk.ac.tees.basic.observer1.v8002382;
 
-import uk.ac.tees.basic.observer1.username.StockBroker;
-import uk.ac.tees.basic.observer1.username.Share;
-import uk.ac.tees.basic.observer1.username.BankManager;
+import uk.ac.tees.basic.observer1.v8002382.StockBroker;
+import uk.ac.tees.basic.observer1.v8002382.Share;
+import uk.ac.tees.basic.observer1.v8002382.BankManager;
 import org.junit.Test;
-import uk.ac.tees.basic.observer1.username.BankManager;
-import uk.ac.tees.basic.observer1.username.BankManager;
-import uk.ac.tees.basic.observer1.username.Share;
-import uk.ac.tees.basic.observer1.username.Share;
-import uk.ac.tees.basic.observer1.username.StockBroker;
-import uk.ac.tees.basic.observer1.username.StockBroker;
 import static org.junit.Assert.*;
 
 /** A set of unit tests that check the solution to AJP-P3-BASIC, 
@@ -154,6 +148,7 @@ public class ShareTest {
         share.setPrice(PRICE6);
         share.setPrice(PRICE8);
         final int expectedValue1 = 0;
+        System.out.println(bankManager.getPortfolio());
         assertEquals(bankManager.getPortfolio(), expectedValue1);
         final int expectedValue2 = 0;
         assertEquals(stockBroker.getPortfolio(), expectedValue2);
