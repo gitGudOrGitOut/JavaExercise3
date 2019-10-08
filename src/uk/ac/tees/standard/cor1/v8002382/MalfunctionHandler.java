@@ -17,12 +17,21 @@ public abstract class MalfunctionHandler {
     MalfunctionHandler next;
     final public void processMalfunction(Malfunction malfunction)
     {
+        System.out.println(malfunction.severity);
+            System.out.println(severity);
         if(malfunction.getSeverity().compareTo(severity) <= 0)
         {
+            System.out.println("ill do it");
+            
+            System.out.println();
             handleProblem(malfunction);
         }
         else
+        {
+            System.out.println("next handle pls");
+            System.out.println();
             next.processMalfunction(malfunction);
+        }
     }
     public void setNextHandler(MalfunctionHandler next)
     {

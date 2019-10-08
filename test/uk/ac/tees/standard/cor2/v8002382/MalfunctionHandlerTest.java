@@ -37,8 +37,8 @@ public class MalfunctionHandlerTest {
         
         // Use trickle down technique to build chain
         sm.setNextHandler(sr);
-        sm.setNextHandler(e);
-        sm.setNextHandler(c);
+        sr.setNextHandler(e);
+        e.setNextHandler(c);
         
         // Create malfunctions
         final Malfunction m1 = new Malfunction(Severity.HIGH, "Life support error. Oxygen "
