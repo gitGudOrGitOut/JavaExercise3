@@ -1,23 +1,15 @@
 package uk.ac.tees.advanced.template.v8002382;
 
-import uk.ac.tees.advanced.template.username.Bot;
-import uk.ac.tees.advanced.template.username.AerialBot;
+import uk.ac.tees.advanced.template.v8002382.Bot;
+import uk.ac.tees.advanced.template.v8002382.AerialBot;
 import uk.ac.tees.advanced.template.v8002382.RadiationLevel;
 import uk.ac.tees.advanced.template.v8002382.FileUtility;
 import uk.ac.tees.advanced.template.v8002382.Environment;
-import uk.ac.tees.advanced.template.username.ScannerBot;
-import uk.ac.tees.advanced.template.username.DiggerBot;
+import uk.ac.tees.advanced.template.v8002382.ScannerBot;
+import uk.ac.tees.advanced.template.v8002382.DiggerBot;
 import java.io.File;
 import java.util.ArrayList;
 import org.junit.Test;
-import uk.ac.tees.advanced.template.username.AerialBot;
-import uk.ac.tees.advanced.template.username.AerialBot;
-import uk.ac.tees.advanced.template.username.Bot;
-import uk.ac.tees.advanced.template.username.Bot;
-import uk.ac.tees.advanced.template.username.DiggerBot;
-import uk.ac.tees.advanced.template.username.DiggerBot;
-import uk.ac.tees.advanced.template.username.ScannerBot;
-import uk.ac.tees.advanced.template.username.ScannerBot;
 import static org.junit.Assert.*;
 
 /** Unit tests to test the solution to AJP-P3-ADVANCED, template method task.
